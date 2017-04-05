@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript">
+        function test(){
+            var container = document.getElementById('container')
+            var first = document.querySelectorAll('.slider')[0]
+            first.classList.toggle('closed');
+            setTimeout(function(){
+                first.classList.toggle('closed');
+                container.appendChild(first)
+            },1100)
+        }
+        setInterval(test,2100)
+
+
+      
+    </script>
+</head>
+<body>
+    <div id='container'>  
+      <div class="slider" id="slider">1</div> 
+      <div class="slider">2</div>
+      <div class="slider">3</div> 
+    </div>  
+    <button onclick="test()">click me</button> 
+</body>
+</html>
+
+
