@@ -1,22 +1,25 @@
-﻿ #container{
-    height: 200px; 
-    width: 100%; 
-    border: 1px solid #ccc;
+﻿ *{
+    margin:0;
+    padding:0;
  }
+
+ #container{
+    height: 200px; 
+    width: 200px; 
+    overflow: hidden;
+    white-space: nowrap;
+ }
+
  .slider {   
     display:inline-block;
-    overflow-x: hidden;   
-    max-width: 500px;   
-    /* ×î´ó¸ß¶È */  
-    background: pink;   
-    height: 200px;   
-    width: 200px;   
-   
-    /*  WebkitÄÚºËä¯ÀÀÆ÷£ºSafari and Chrome*/  
+    
+    max-width: 500px; 
+    overflow: hidden;
+    /*  Safari,Chrome*/  
     -webkit-transition-property: all;   
     -webkit-transition-duration: .5s;   
-    -webkit-transition-timing-function: cubic-bezier(0,0,1,1);   
-    /*  MozillaÄÚºËä¯ÀÀÆ÷£ºfirefox3.5+*/  
+    -webkit-transition-timing-function: cubic-bezier(0,0,0.5,1);   
+    /*  Firefox*/  
     -moz-transition-property: all;   
     -moz-transition-duration: .5s;   
     -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);   
@@ -29,6 +32,18 @@
     -ms-transition-duration: .5s;   
     -ms-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);   
 }   
+
 .slider.closed {   
      max-width:0;
 }  
+
+.slider img{
+    width:200px; /*图片按照固定尺寸显示*/
+    height:200px;
+    float:left;
+}
+
+
+#slider{
+    /*width:100px;*/
+}
